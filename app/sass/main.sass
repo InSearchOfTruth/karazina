@@ -1,0 +1,450 @@
+@import reset.css
+
+
+.wrapper
+    width: 100%
+    position: relative
+    display: flex
+    justify-content: center
+.check-document
+    max-width: 1440px
+    width: 100%
+    position: relative
+    max-height: 1024px
+    &-background
+        width: 100%
+        overflow: hidden
+        position: absolute
+        height: 100%
+    &-content
+        max-width: 1200px
+        width: 100%
+        min-height: 100vh
+        max-height: 1024px
+        position: relative
+        margin: 0 auto
+        padding: 0 15px
+        box-sizing: border-box
+.background
+    &-figure
+        display: inline-block
+        position: absolute
+        svg
+            
+    &-vector
+        &-top
+            top: -30px
+        &-bottom
+            bottom: 0
+            right: 0
+    &-circle
+        width: 480px
+        height: 480px
+        border-radius: 100%
+        background: #F7ECD5
+        left: 1024px
+        top: 10%
+    &-rectangle
+        transform: rotate(-38.45deg)
+        width: 200px
+        height: 200px
+        background: #364476
+        border-radius: 20px
+        left: 67%
+        top: 37%
+.content
+    &-logo
+        padding: 20px 0
+        margin-bottom: 10%
+    &-text
+        max-width: 600px
+        width: 70%
+        padding-bottom: 50px
+        h1
+            font-family: 'Roboto', sans-serif
+            font-style: normal
+            font-weight: 300
+            line-height: 59px
+            font-size: 50px
+            text-transform: uppercase
+            color: #364476
+            margin: 0 0 50px
+            span
+                font-style: normal
+                font-weight: bold
+                font-size: 90px
+                line-height: 105px
+        p
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 36px
+            color: #000000
+            margin: 0
+    &-timer
+        display: flex
+        padding-bottom: 7%
+        p
+            margin: 0
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            line-height: 21px
+        &-text
+            display: flex
+            align-items: center
+            p
+                font-size: 18px
+                color: #364476
+                margin-right: 30px
+        &-counter
+            display: flex
+            align-items: center
+            p
+                font-size: 68px
+                color: #DADADA
+                font-weight: 100
+    &-button
+        button
+            font-family: Roboto
+            font-style: normal
+            font-weight: bold
+            font-size: 25px
+            line-height: 29px
+            text-transform: uppercase
+            color: #FFFFFF
+            width: 375px
+            height: 80px
+            border: none
+            background: #FFC141
+            box-shadow: 0px 0px 40px rgba(255, 193, 65, 0.45)
+            border-radius: 40px   
+            cursor: pointer
+            &:hover
+                background: #efaa1d 
+.modal
+    visibility: hidden
+    opacity: 0
+    position: fixed
+    width: 100%
+    height: 100%
+    background: #ffffff
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    height: 100%
+    justify-content: center
+    transition: visibility 0.2s linear,opacity 0.2s linear
+    &-content
+        max-width: 1000px
+        width: 100%
+    &.open-modal
+        visibility: visible
+        opacity: 1
+.progress-line
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 135px
+.dash
+    width: 10%
+    border-bottom: 1px solid #ECECEC
+.step
+    h4
+        margin: 0
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        font-size: 30px
+        line-height: 35px
+        text-transform: uppercase
+        color: #DADADA
+    p
+        margin: 0
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        font-feature-settings: 'tnum' on, 'onum' on
+        color: #DADADA
+    svg
+        filter: grayscale(100%)
+.step.active
+    h4
+        color: #364476
+    p
+        color: #364476
+    svg
+        filter: grayscale(0%)
+.steps
+    position: absolute
+    width: 100%
+    transition: transform 0.3s linear
+    &-one
+        transform: translateX(0)
+    &-two
+        transform: translateX(100vw)
+    &-three
+        transform: translateX(100vw)
+.modal-form
+    display: flex
+    justify-content: space-between
+    &-head
+        padding-bottom: 70px
+        h3
+            margin: 0
+            font-family: Roboto
+            font-style: normal
+            font-weight: bold
+            font-size: 40px
+            line-height: 47px
+            text-align: center
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #364476
+    &-left
+        display: flex
+        flex-direction: column
+        width: 100%
+        max-width: 400px
+        position: relative
+        &:after
+            content: ""
+            width: 1px
+            border-right: 1px solid #F4F4F4
+            height: 90%
+            position: absolute
+            left: 125%
+            top: 5%
+    &-right
+        width: 100%
+        max-width: 400px
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: center
+    &-input
+        border: none
+        position: relative
+        background: #F4F4F4
+        width: 100%
+        border-radius: 25px
+        padding: 15px 25px
+        font-family: Roboto
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 21px
+        font-feature-settings: 'tnum' on, 'onum' on
+        color: #000000
+        border: 2px solid rgba(0,0,0,0)
+        box-sizing: border-box
+        user-select: none
+        &+ label
+            display: none
+            position: absolute
+            height: 30px
+            justify-content: center
+            align-items: center
+            width: 100%
+            left: 0
+            top: 100%
+            font-family: Roboto
+            font-style: normal
+            font-weight: 500
+            font-size: 12px
+            line-height: 14px
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #EB5757
+        &-block-diploma
+            display: flex
+            justify-content: space-between
+            & input:first-child
+                width: 40%
+            & input:nth-child(2)
+                width: 55%
+        &:-ms-input-placeholder
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 18px
+            line-height: 21px
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #B7B7B7
+        &:-moz-placeholder
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 18px
+            line-height: 21px
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #B7B7B7
+        &::-moz-placeholder 
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 18px
+            line-height: 21px
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #B7B7B7
+        &::-webkit-input-placeholder
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 18px
+            line-height: 21px
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #B7B7B7
+        &.correct-input
+            border: 2px solid #71D958
+        &.wrong-input
+            border: 2px solid #EB5757
+            &+ label
+                display: flex
+        &-block
+            position: relative   
+    &-next-step
+        width: 100%
+        max-width: 400px
+        button
+            background: #F4F4F4
+            border-radius: 40px
+            border: none
+            padding: 25px 60px
+            font-family: Roboto
+            font-style: normal
+            font-weight: bold
+            font-size: 25px
+            line-height: 29px
+            text-transform: uppercase
+            color: #FFFFFF
+            &.active-step-btn
+                cursor: pointer
+                background: #FFC141
+                box-shadow: 0px 0px 40px rgba(255, 193, 65, 0.45)
+    &-checkbox-block
+        display: flex
+        justify-content: space-between
+        width: 75%
+        input[type="radio"]
+            display: none
+        input[type="radio"] + label
+            position: relative
+            margin-left: 50px
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 23px
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #777777
+        input[type="radio"] + label:after
+            content: ""
+            width: 25px
+            height: 25px
+            position: absolute
+            border: 6px solid #F4F4F4
+            box-sizing: border-box
+            border-radius: 100px
+            top: -2px
+            left: -40px
+        input[type="radio"]:checked + label:after
+            border: 6px solid #71D958
+.step-progress-bar
+    width: 100%
+    max-width: 400px
+    padding-bottom: 50px
+    p
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        font-feature-settings: 'tnum' on, 'onum' on
+        color: #DADADA
+        margin: 0 0 20px
+.progress-bar
+    width: 100%
+    border-radius: 30px
+    background: #F4F4F4
+    height: 30px
+    &-complete
+        width: 0
+        height: 100%
+        font-family: Roboto
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        font-feature-settings: 'tnum' on, 'onum' on
+        color: #FFFFFF
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #71D958
+        border-radius: 30px
+        transition: width 0.5s linear
+.first-step,
+.second-step 
+    & .modal-form-input-block:not(:last-child)
+        margin-bottom: 40px
+.modal-result
+    text-align: center
+    max-width: 600px
+    margin: 0 auto
+.result
+    &-name
+        h4
+            margin: 0 0 50px
+            font-family: Roboto
+            font-style: normal
+            font-weight: 500
+            font-size: 20px
+            line-height: 23px
+            text-align: center
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #000000
+    &-info
+        p
+            margin: 0
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 36px
+            text-align: center
+            font-feature-settings: 'tnum' on, 'onum' on
+            color: #000000
+.modal-main
+    min-height: 500px
+    position: relative
+.close-modal
+    position: absolute
+    right: 40px
+    top: 40px
+    cursor: pointer
+@media screen and (max-width: 991px)
+    .background
+        &-vector
+            width: 70%
+            svg
+                width: 100%
+                height: 100%
+@media screen and (min-height: 991px)
+    .background
+        &-circle
+        width: 550px
+        height: 550px
+        left: 1024px
+        top: 10%
+    &-rectangle
+        width: 230px
+        height: 230px
+        left: 55%
+        top: 40%
+    .content
+        &-timer
+            padding-bottom: 15%
