@@ -581,6 +581,9 @@
   top: 40px;
   cursor: pointer; }
 
+.cbalink {
+  display: none; }
+
 @media screen and (max-width: 991px) {
   .background-vector {
     width: 70%; }
